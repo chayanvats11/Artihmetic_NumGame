@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         int[][]dataFrame=dataPrep(); //dataPrep function returns a two-dimenssional array
         double slope=LR.getSlope(dataFrame); //LR class, which provides slope on invoking getSlope
         new AlertDialog.Builder(this)
-               // .setIcon() //your custom icon
+                .setIcon(android.R.drawable.ic_dialog_info) //your custom icon
                 .setTitle("Performance")
 
                 .setMessage(getInterpretation(dataFrame,slope))
@@ -177,7 +177,6 @@ public class MainActivity extends AppCompatActivity {
             if(n==6)
                 return "Awesome, Perfect score of 3 in last 6 games";
         }
-        slope = 0;
         return "Constant Performance";
     }
 }
